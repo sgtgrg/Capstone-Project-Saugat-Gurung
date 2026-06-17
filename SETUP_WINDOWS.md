@@ -39,7 +39,7 @@ git --version
 
 ## 2. Open the project & install VS Code extensions
 
-1. In VS Code: **File → Open Folder →** select `D:\Capstone Project`.
+1. In VS Code: **File → Open Folder →** select `C:\Users\Acer\Documents\GitHub\Capstone-Project`.
 2. Install these extensions (click the Extensions icon on the left, search each):
    - **Python** (ms-python.python)
    - **Pylance**
@@ -56,7 +56,7 @@ git --version
 In a terminal:
 
 ```bash
-cd "D:\Capstone Project\backend"
+cd "C:\Users\Acer\Documents\GitHub\Capstone-Project\backend"
 
 REM create an isolated Python environment
 python -m venv .venv
@@ -85,7 +85,7 @@ Test it: open http://localhost:5000/api/health in your browser — you should se
 JSON with `"status": "ok"`.
 
 > When you come back another day, you only need:
-> `cd "D:\Capstone Project\backend"` → `.venv\Scripts\activate` → `python run.py`
+> `cd "C:\Users\Acer\Documents\GitHub\Capstone-Project\backend"` → `.venv\Scripts\activate` → `python run.py`
 
 ---
 
@@ -111,7 +111,7 @@ is running.
 Open a **new terminal** (keep the backend running):
 
 ```bash
-cd "D:\Capstone Project\frontend"
+cd "C:\Users\Acer\Documents\GitHub\Capstone-Project\frontend"
 
 REM install dependencies (first time only; takes a few minutes)
 npm install
@@ -127,36 +127,33 @@ Open the URL it prints (usually **http://localhost:5173**). On the Home page you
 should see **"✓ Connected to API"** — that confirms frontend ↔ backend ↔ database
 are all wired up.
 
-> Coming back another day: `cd "D:\Capstone Project\frontend"` → `npm run dev`
+> Coming back another day: `cd "C:\Users\Acer\Documents\GitHub\Capstone-Project\frontend"` → `npm run dev`
 
 ---
 
 ## 6. Push to your GitHub repo
 
-You said you already have a repo. From the project root:
+Your repo is already set up (`git init` done, remote
+`origin` → github.com/sgtgrg/Capstone-Project-Saugat-Gurung). So you just stage,
+commit, and push. From the project root:
 
 ```bash
-cd "D:\Capstone Project"
+cd "C:\Users\Acer\Documents\GitHub\Capstone-Project"
 
-git init
 git add .
 git commit -m "Day 0: project scaffold (Flask + React + MongoDB)"
-git branch -M main
-
-REM connect to YOUR repo (replace the URL with yours)
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-
-git push -u origin main
+git push
 ```
 
-If the repo already has commits and Git refuses the push, tell me and I'll give
-you the safe merge steps (we'll likely use `git pull --rebase origin main` first).
+If Git says the remote has commits you don't have locally, run
+`git pull --rebase origin main` first, then `git push`. If anything looks
+confusing, paste the message into our chat and I'll guide you.
 
 ### Daily routine after Day 0
 At the end of each day's work:
 
 ```bash
-cd "D:\Capstone Project"
+cd "C:\Users\Acer\Documents\GitHub\Capstone-Project"
 git add .
 git commit -m "Day N: <what you built>"
 git push
